@@ -29,83 +29,73 @@
 
 <body class="loading">
     <div id="loader"></div>
-    <div class="nav">
-    <ul id="menu-menu" class="menu">
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/whoami/" title="Whoami" target="_blank" rel="noopener">Whoami</a>
-        </li>
-        
-        <li class="  menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="https://github.com/YuleZhang" title="Github" target="_blank" rel="noopener">Github</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/关于/" title="About" target="_blank" rel="noopener">About</a>
-        </li>
-        
-        <li class="  menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="https://github.com/Fechin/hexo-theme-diaspora" title="关于" target="_blank" rel="noopener">关于</a>
-        </li>
-        
-    </ul>
-    <p id="copyright">
-        &copy; 2018 YuleZhang&#39;s Blogs.
-        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
-        Theme <a href="https://github.com/Fechin/hexo-theme-diaspora" title="Diaspora" target="_blank" rel="noopener">Diaspora</a>
-        by Fechin
-    </p>
-</div>
-
-<div id="container">
-    
-<div id="screen">
-    <div id="mark">
-        <div class="layer" data-depth="0.4">
-            <img src="/img/collection.jpg" id="cover" crossorigin="anonymous" width="1920" height="1080">
-        </div>
-    </div>
-    <div id="vibrant">
-        <svg viewBox="0 0 2880 1620" height="100%" preserveAspectRatio="xMaxYMax slice">
-            <polygon opacity="0.7" points="2000,1620 0,1620 0,0 600,0 "/>
-        </svg>
-        <div></div>
-    </div>
-    <div id="header">
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">story</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
         <div>
-            <a class="image-logo" href="/"></a>
-            <div class="icon-menu switchmenu"></div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
         </div>
     </div>
-    
-    <div id="post0">
-        <p>八月 07, 2018</p>
-        <h2><a href="/2018/08/07/Collection/" title="个人收藏" class="posttitle">个人收藏</a></h2>
-        <p class="summary">优质视频学习资源中国大学MOOC能较为方便的查看国内知名高校开设的课程，适合学一些比较系统的知识、架构或者涉足新领...</p>
-    </div>
-    
+    <div class="scrollbar"></div>
 </div>
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">story</h1>
+        <div class="stuff">
+            <span>八月 07, 2018</span>
+            
 
-    <div id="primary">
+        </div>
+        <div class="content markdown">
+            
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        <li title='0' data-url='http://link.hhtjim.com/163/5146554.mp3'></li>
+                    
+                        <li title='1' data-url='http://link.hhtjim.com/qq/001faIUs4M2zna.mp3'></li>
+                    
+                </ul>
+            
+        </div>
         
-<div class="post">
-    <a href="/2018/08/07/hello-world/" title="第一次建网站">
-        <img src="/img/buildWebsite.jpg" class="cover" width="680" height="440">
-    </a>
-    <div class="else">
-        <p>八月 07, 2018</p>
-        <h3><a href="/2018/08/07/hello-world/" title="第一次建网站" class="posttitle">第一次建网站</a></h3>
-        <p>打造属于自己的个人网站
-前言对于一个小白来说，第一次建立自己的个人网页还真是一件既兴奋又无奈的事情。兴奋是因为你即将有一个属于自己的平台，可以将自己的感悟...</p>
-    </div>
-</div>
+    <div id='gitalk-container' class="comment link"
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d=''
+    >查看评论</div>
 
 
     </div>
     
+        <div class='side'>
+            
+        </div>
+    
 </div>
-<div id="preview"></div>
 
+
+    </div>
+</div>
 </body>
 <script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 <script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
