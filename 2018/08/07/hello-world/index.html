@@ -61,14 +61,14 @@
         </div>
         <div class="content markdown">
             <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>对于一个小白来说，第一次建立自己的个人网页还真是一件既兴奋又无奈的事情。兴奋是因为你即将有一个属于自己的平台，可以将自己的感悟、收藏、简历等文章保存起来，也可以分享给他<br>人。无奈是因为，在你搭着搭着，你会发现出现了各种各样的问题，这其中包含你的一些个性却<br>没法实现的需求以及半路杀出的各种bug。不过，经历一番麻烦，也是会留下深刻的印象的。</p>
-<h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>说到建立网站，不得不考虑不同人出于不同的需求，来走自己的网站路线。可是，对于小白们或者不干网站这方面的大佬们来说，做一个又显得费劲。而我想我的需求跟大部分人一样，当然我的实现也是比较low的一种。我没有买域名，也没有租服务器，而是蹭<em>github的<a href="https://pages.github.com/" target="_blank" rel="noopener">github page</a></em>，具体创建仓库的教程网上都有详细概述。<br>而下面的两个配置路线有两个优点  </p>
+<h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>说到建立网站，不得不考虑不同人出于不同的需求，来走自己的网站路线。可是，对于小白们或者不干网站这方面的大佬们来说，做一个又显得费劲。而我想我的需求跟大部分人一样，当然我的实现也是比较low的一种。我没有买域名，也没有租服务器，而是蹭github的<em><a href="https://pages.github.com/" target="_blank" rel="noopener">github page</a></em>，具体创建仓库的教程网上都有详细概述。<br>而下面的两个配置路线有两个优点  </p>
 <ol>
 <li>有成型的网页模板，会让你的主页逼格瞬间提升一个档次。  </li>
 <li>方便后续更新维护你的网站。<h1 id="github-page建网页路线"><a href="#github-page建网页路线" class="headerlink" title="github page建网页路线"></a>github page建网页路线</h1></li>
 <li>GitHub Pages + Hexo  </li>
 <li>GitHub Pages + jekyll<br>我采用的搭建博客的方式是第一种，建议Windows用户走第一种。<br>因为我先走的第二种，走到一半卡死了，cmd窗口出现毫无头绪的错误，网上也找不到什么解决方案。当然你也可以勇于尝试，毕竟机子不同嘛。<br>接下来我们先说第一种</li>
 </ol>
-<h1 id="Hexo配置"><a href="#Hexo配置" class="headerlink" title="Hexo配置"></a>Hexo配置</h1><h2 id="下载Node-js"><a href="#下载Node-js" class="headerlink" title="下载Node.js"></a><em>下载<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a></em></h2><p>其中 LTS为稳定版本 ，Current为当前最新版本</p>
+<h1 id="Hexo配置"><a href="#Hexo配置" class="headerlink" title="Hexo配置"></a>Hexo配置</h1><h2 id="下载Node-js"><a href="#下载Node-js" class="headerlink" title="下载Node.js"></a>下载<em><a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a></em></h2><p>其中 LTS为稳定版本 ，Current为当前最新版本</p>
 <h2 id="下载git"><a href="#下载git" class="headerlink" title="下载git"></a>下载<em><a href="https://git-scm.com/" target="_blank" rel="noopener">git</a></em></h2><p>下载完配置账户，及ssh等，这里有详细介绍<em><a href="https://blog.csdn.net/qq_23341529/article/details/79331519" target="_blank" rel="noopener">git配置</a></em></p>
 <h2 id="安装Hexo及初步预览"><a href="#安装Hexo及初步预览" class="headerlink" title="安装Hexo及初步预览"></a>安装Hexo及初步预览</h2><p>网上大多hexo的配置都是以前版本的指令了，最新的还要参考<em><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo官网</a></em><br>任意位置右键选择Git Bash Here(即打开git的命令窗口)<br><code>$ npm install -g hexo-cli</code><br>接下来找一个你要建立网站的目录，在它的上一级git bash here，执行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;  </span><br><span class="line">$ cd &lt;folder&gt;  </span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure></p>
 <p>此时你的界面应该是这样的  </p>
@@ -111,7 +111,7 @@
         </div>
         
     <div id='gitalk-container' class="comment link"
-        data-ae='false'
+        data-ae='true'
         data-ci=''
         data-cs=''
         data-r=''
