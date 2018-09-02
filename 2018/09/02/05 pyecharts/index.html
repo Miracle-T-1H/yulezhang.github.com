@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>YuleZhang&#39;s Blogs - resources</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="YuleZhang,"> 
+    
+    
+    <link rel="alternative" href="atom.xml" title="YuleZhang&#39;s Blogs" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="/css/diaspora.css">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-8691406134231910",
+        enable_page_level_ads: true
+      });
+    </script>
+
+</head>
+
+<body class="loading">
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">pyecharts可视化学生信息</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">pyecharts可视化学生信息</h1>
+        <div class="stuff">
+            <span>九月 02, 2018</span>
+            
+  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/echarts/">echarts</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/pyecharts/">pyecharts</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/python/">python</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/数据可视化/">数据可视化</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><hr>
+<p>pyecharts是python的一个包，里面封装了echarts的接口，而echarts是一个功能非常强大的绘图工具，图形非常简洁、美观。相比于matplotlib还是有很多优势的，比如echarts的交互功能。如图：</p>
+<p><img src="https://user-images.githubusercontent.com/19553554/35104157-fa39e170-fca2-11e7-9738-1547e22914a6.gif" alt="动画演示"> </p>
+<p><img src="\img\pyecharts\pyecharts.gif" alt="pyecharts"></p>
+<p>所以它可以用来演示功能、或者数据分析报告等等。</p>
+<h2 id="加载数据集"><a href="#加载数据集" class="headerlink" title="加载数据集"></a>加载数据集</h2><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">df = pd.read_csv(<span class="string">"Student Info.csv"</span>) <span class="comment">#读取csv文件</span></span><br><span class="line">df.info()  <span class="comment">#查看学生各个属性有无缺失值</span></span><br></pre></td></tr></table></figure>
+<h2 id="数据清洗"><a href="#数据清洗" class="headerlink" title="数据清洗"></a>数据清洗</h2><hr>
+<p>在加载到数据集之后，我们首先统计一下学生的生源地分布情况。要统计生源地情况，即我们要得到两个列表，第一个为各省份名称，第二个列表为对应名称在数据集中出现的次数(频率)。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">region_num = df[<span class="string">'生源地'</span>].value_counts() <span class="comment">#统计各类别频率</span></span><br><span class="line">region_num = region_num.values.tolist() <span class="comment">#将频率转换为列表</span></span><br><span class="line">region = df[<span class="string">'生源地'</span>].value_counts().keys() <span class="comment">#统计各类别频率对应的键值</span></span><br><span class="line">region = region.values.tolist() <span class="comment">#将键值转换为列表</span></span><br><span class="line">print(region_num) <span class="comment">#打印频率查看</span></span><br><span class="line">print(region)  <span class="comment">#打印地区查看</span></span><br></pre></td></tr></table></figure>
+<h2 id="绘图-柱状图-地域"><a href="#绘图-柱状图-地域" class="headerlink" title="绘图-柱状图-地域"></a>绘图-柱状图-地域</h2><hr>
+<p>我们用pyecharts的柱状图来绘制图形，同时将上面得到的region_num和region作为参数传到绘图函数中。在这里add采用了多个参数，如无需要可以去掉。</p>
+<blockquote>
+<ul>
+<li><code>add()</code><br>主要方法，用于添加图表的数据和设置各种配置项</li>
+<li><code>print_echarts_options()</code><br>打印输出图表的所有配置项</li>
+<li><code>render()</code><br>默认将会在根目录下生成一个 render.html 的文件，支持 path 参数，设置文件保存位置，如 render(r”e:\my_first_chart.html”)，文件用浏览器打开。</li>
+</ul>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyecharts <span class="keyword">import</span> Bar <span class="comment">#引用直方图</span></span><br><span class="line">bar = Bar(<span class="string">"信息工程学院"</span>,<span class="string">"信息2018级新生生源地统计"</span>,width=<span class="number">1000</span>, height = <span class="number">500</span>)</span><br><span class="line"></span><br><span class="line">bar.use_theme(<span class="string">'dark'</span>)  <span class="comment">#背景主题</span></span><br><span class="line"></span><br><span class="line">bar.add(<span class="string">"生源地"</span>, region, region_num, is_stack=<span class="keyword">False</span>, bar_category_gap=<span class="string">'20%'</span>,xaxis_interval =<span class="number">0</span>,xaxis_rotate=<span class="number">20</span>, is_more_utils=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#bar.render() #导出为网页</span></span><br><span class="line">bar <span class="comment">#查看</span></span><br></pre></td></tr></table></figure>
+<p>通过以上步骤就能看到如下图所示结果</p>
+<p><img src="\img\pyecharts\pyecharts01.png" alt="pyecharts01"> </p>
+<h2 id="绘图-饼图-第一志愿"><a href="#绘图-饼图-第一志愿" class="headerlink" title="绘图-饼图-第一志愿"></a>绘图-饼图-第一志愿</h2><p>同样要先进行数据清洗，查看有无缺失值</p>
+<p><img src="\img\pyecharts\pyecharts02.png" alt="pyecharts02"></p>
+<p>可以看到，第一志愿数据是不全的，需要进行缺失值处理。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">choice = df[<span class="string">'第一志愿'</span>].fillna(<span class="string">''</span>) <span class="comment">#缺失值填充为空</span></span><br><span class="line">volunteer_first_num = df[<span class="string">'第一志愿'</span>].value_counts() <span class="comment">#统计各类别频率</span></span><br><span class="line">volunteer_first_num = region_num.values.tolist() <span class="comment">#将频率转换为列表</span></span><br><span class="line">volunteer_first = df[<span class="string">'第一志愿'</span>].value_counts().keys() <span class="comment">#统计各类别频率对应的键值</span></span><br><span class="line">volunteer_first = region.values.tolist() <span class="comment">#将键值转换为列表</span></span><br><span class="line">print(volunteer_first_num) <span class="comment">#打印频率查看</span></span><br><span class="line">print(volunteer_first)  <span class="comment">#打印地区查看</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li><p>name -&gt; str<br>图例名称</p>
+</li>
+<li><p>attr -&gt; list<br>属性名称</p>
+</li>
+<li><p>value -&gt; list<br>属性所对应的值</p>
+</li>
+<li><p>radius -&gt; list<br>饼图的半径，数组的第一项是内半径，第二项是外半径，默认为 [0, 75]<br>默认设置成百分比，相对于容器高宽中较小的一项的一半</p>
+</li>
+<li><p>center -&gt; list<br>饼图的中心（圆心）坐标，数组的第一项是横坐标，第二项是纵坐标，默认为 [50, 50]<br>默认设置成百分比，设置成百分比时第一项是相对于容器宽度，第二项是相对于容器高度</p>
+</li>
+<li><p>rosetype -&gt; str</p>
+<p>是否展示成南丁格尔图，通过半径区分数据大小，有’radius’和’area’两种模式。默认为’radius’</p>
+<ul>
+<li>radius：扇区圆心角展现数据的百分比，半径展现数据的大小</li>
+<li>area：所有扇区圆心角相同，仅通过半径展现数据大小</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyecharts <span class="keyword">import</span> Pie <span class="comment">#饼图</span></span><br><span class="line"></span><br><span class="line">pie = Pie(<span class="string">"第一志愿"</span>) <span class="comment">#标题</span></span><br><span class="line"></span><br><span class="line">pie.add(<span class="string">""</span>, choice, choice_num, radius=[<span class="number">30</span>, <span class="number">75</span>], is_legend_show=<span class="keyword">False</span>, is_label_show=<span class="keyword">True</span>)</span><br><span class="line"><span class="comment">#radius半径范围</span></span><br><span class="line"><span class="comment">#is_legend_show是否显示图例</span></span><br><span class="line"><span class="comment">#is_label_show是否显示标签</span></span><br><span class="line">pie</span><br></pre></td></tr></table></figure>
+<pre><code>![pyecharts03](\img\pyecharts\pyecharts03.png) 
+</code></pre><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>以上就是我对pyecharts的简单使用以及探索，在这个过程中我发现参阅文档是极其重要的，在网上闷着头找解决方案不如认真仔细的读一读<a href="http://pyecharts.org/#/zh-cn/prepare" target="_blank" rel="noopener">pyecharts文档</a> ，里面绝对有你想要找的地方，起初我是找一个字体倾斜的解决方案，找了半天，给的都不是特别全面，在看了文档之后才发现，许多问题作者都是考虑在内了的，这会让你事半功倍。而且，pyecharts的封装是由我们国人完成的，文档阅读起来非常方便，所以必须支持下。</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        <li title='0' data-url='http://link.hhtjim.com/163/5146554.mp3'></li>
+                    
+                        <li title='1' data-url='http://link.hhtjim.com/qq/001faIUs4M2zna.mp3'></li>
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+        data-ae='true'
+        data-ci='3da5469f6d036e226011'
+        data-cs='ad48e67bc0a2741e37f4a3e2332da0b589d59275'
+        data-r='yulezhang.github.com'
+        data-o=''
+        data-a=''
+        data-d='true'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#介绍"><span class="toc-number">1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#加载数据集"><span class="toc-number">2.</span> <span class="toc-text">加载数据集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据清洗"><span class="toc-number">3.</span> <span class="toc-text">数据清洗</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#绘图-柱状图-地域"><span class="toc-number">4.</span> <span class="toc-text">绘图-柱状图-地域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#绘图-饼图-第一志愿"><span class="toc-number">5.</span> <span class="toc-text">绘图-饼图-第一志愿</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">6.</span> <span class="toc-text">总结</span></a></li></ol>
+        </div>
+    
+</div>
+    </div>
+</div>
+</body>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</html>
