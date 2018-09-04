@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>YuleZhang&#39;s Blogs - resources</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="YuleZhang,"> 
+    
+    
+    <link rel="alternative" href="atom.xml" title="YuleZhang&#39;s Blogs" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="/css/diaspora.css">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-8691406134231910",
+        enable_page_level_ads: true
+      });
+    </script>
+
+</head>
+
+<body class="loading">
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">一种新的基于小阴影图像的彩色图像秘密共享方案</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">一种新的基于小阴影图像的彩色图像秘密共享方案</h1>
+        <div class="stuff">
+            <span>九月 03, 2018</span>
+            
+  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/k-n-门限/">(k,n)门限</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/小阴影/">小阴影</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/秘密共享/">秘密共享</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/秘密彩色图像共享/">秘密彩色图像共享</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <hr>
+<h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>在过去几年，秘密图像分存技术变成了除了传统密码学的另一个努力的方向去防止秘密图像被窃取。由于小的影子图像可以加快秘密颜色图像的传播，在这篇文章中我们结合了Chang和Wu的单位图BTC（GSBTC）的渐进式搜索算法和Shamir的（k,n）门限概念提出一种新的秘密彩色图像共享方案来生成更小的影子。实验结果证实了提出的架构成功减小了影子的大小，并且每个影子表现为一个随机类的图像，这个图像能防止秘密彩色图像的信息泄露。此外，每个影子中两个纵向或横向相邻像素的关联性明显小于秘密彩色图像。提出的方案也实现了，平均来看，NPCR值为0.414%、AUCI值为32.78%。因此，在我们的方案中，一个像素差异会导致相应阴影的显著差异。因此，该方案的安全性也得到了证实。</p>
+<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>随着电脑技术的成长，数字相机之类的多媒体变得越来越受欢迎，使得越来越多的数字图像在网上广泛的分享和传播。然而，在网上传输那些秘密或者重要的图像，例如被用于军事或者企业重要秘密图像，则面临一定的危险。恶意的人监视互联网并试图检测并获取这些有价值的图像。为了使这些传输图像免于获取或篡改，秘密分寸技术提出了继传统密码学和隐写术之外的一个新的分支来从掠夺行为中保护重要图像。在这个秘密共享技术后的概念，也叫做（k，n）门限方案，它是Blakley和Shamir独立提出的。这些（k，n）门限方案有三个性质。                                                       当 $k \leq n​$ ：<br>（1）：这个秘密图像可以被分成n个部分<br>（2）：任意k或者大于k个部分都能恢复秘密图像<br>（3）：任意k - 1 或者小于k个部分不能计算秘密值<br>Naor和Shamir在1995年第一次使用(k, n)门限方案介绍了聚焦于图像数据的秘密图像共享技术。本质上，秘密图像分存技术使用了几个随机性的被称为影子的图像来代替原始图像在网络上传输数据。影子可以阻挡恶意的攻击者并防止秘密图像被直接访问。秘密共享方案继承了(k, n)门限方案的三个属性。</p>
+<p>在过去十年里，许多秘密共享方案被提出。它们有一个共同的特点，即秘密图像可以通过叠加阴影来恢复，换句话说，这些秘密图像可以很容易地恢复，而无需复杂的计算。然而，在这些方案中，阴影的大小通常大于或等于秘密图像的大小。</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        <li title='0' data-url='http://link.hhtjim.com/163/5146554.mp3'></li>
+                    
+                        <li title='1' data-url='http://link.hhtjim.com/qq/001faIUs4M2zna.mp3'></li>
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+        data-ae='false'
+        data-ci='3da5469f6d036e226011'
+        data-cs='ad48e67bc0a2741e37f4a3e2332da0b589d59275'
+        data-r='yulezhang.github.com'
+        data-o='YuleZhang'
+        data-a='YuleZhang'
+        data-d='true'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#摘要"><span class="toc-number">1.</span> <span class="toc-text">摘要</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#介绍"><span class="toc-number">2.</span> <span class="toc-text">介绍</span></a></li></ol>
+        </div>
+    
+</div>
+    </div>
+</div>
+</body>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</html>
