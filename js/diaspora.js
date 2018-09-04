@@ -109,8 +109,8 @@ var Diaspora = {
     preview: function() {
         // preview toggle
         $("#preview").one('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function() {
-            var previewVisible = $('#preview').hasClass('show');
-            if (!!previewVisible) {
+            var left = $('#preview').css('left');
+            if (left == '0px') {
                 $('#container').hide();
             }else{
                 $('#container').show();
