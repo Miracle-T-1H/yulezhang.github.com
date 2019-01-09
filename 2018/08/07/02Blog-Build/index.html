@@ -15,9 +15,9 @@
 <meta property="og:site_name" content="YuleZhang&#39;s Blogs">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://yulezhang.github.io/img/buildWebsites.jpg">
-<meta property="og:image" content="http://op1ybr0zi.bkt.clouddn.com/mulu.png">
-<meta property="og:image" content="http://op1ybr0zi.bkt.clouddn.com/hexos.png">
-<meta property="og:updated_time" content="2018-11-19T01:19:33.725Z">
+<meta property="og:image" content="https://yulezhang.github.io/2018/08/07/02Blog-Build/assets/1547024489695.png">
+<meta property="og:image" content="https://yulezhang.github.io/2018/08/07/02Blog-Build/assets/1547024466501.png">
+<meta property="og:updated_time" content="2019-01-09T09:05:59.576Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一次建网站">
 <meta name="twitter:image" content="https://yulezhang.github.io/img/buildWebsites.jpg">
@@ -203,11 +203,13 @@ var _hmt = _hmt || [];
 <p>各样的问题，这其中包含你</p>
 <p>的一些个性却没法实现的需求以及半路杀出的各种bug。不过，经历一番麻烦，也</p>
 <p>是会留下深刻的印象的。</p>
-<h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>说到建立网站，不得不考虑不同人出于不同的需求，来走自己的网站路线。可是，对于小白们或者不干网站这方面的大佬们来说，做一个又显得费劲。而我想我的需求跟大部分人一样，当然我的实现也是比较low的一种。我没有买域名，也没有租服务器，而是蹭github的<em><a href="https://pages.github.com/" target="_blank" rel="noopener">github page</a></em>，具体创建仓库的教程网上都有详细概述。<br>而下面的两个配置路线有两个优点  </p>
+<h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>说到建立网站，不得不考虑不同人出于不同的需求，来走自己的网站路线。可是，对于小白们或者不干网站这方面的大佬们来说，做一个又显得费劲。而我想我的需求跟大部分人一样，当然我的实现也是比较low的一种。我没有买域名，也没有租服务器，而是蹭github的<em><a href="https://pages.github.com/" target="_blank" rel="noopener">github page</a></em>，具体创建仓库的教程网上都有详细概述。<br>而下面的两个配置路线有两个优点 </p>
 <ol>
 <li>有成型的网页模板，会让你的主页逼格瞬间提升一个档次。  </li>
-<li>方便后续更新维护你的网站。<h1 id="github-page建网页路线"><a href="#github-page建网页路线" class="headerlink" title="github page建网页路线"></a>github page建网页路线</h1></li>
-<li>GitHub Pages + Hexo  </li>
+<li>方便后续更新维护你的网站。  </li>
+</ol>
+<h1 id="github-page建网页路线"><a href="#github-page建网页路线" class="headerlink" title="github page建网页路线"></a>github page建网页路线</h1><ol>
+<li>GitHub Pages + Hexo </li>
 <li>GitHub Pages + jekyll<br>我采用的搭建博客的方式是第一种，建议Windows用户走第一种。<br>因为我先走的第二种，走到一半卡死了，cmd窗口出现毫无头绪的错误，网上也找不到什么解决方案。当然你也可以勇于尝试，毕竟机子不同嘛。<br>接下来我们先说第一种</li>
 </ol>
 <h1 id="Hexo配置"><a href="#Hexo配置" class="headerlink" title="Hexo配置"></a>Hexo配置</h1><h2 id="下载Node-js"><a href="#下载Node-js" class="headerlink" title="下载Node.js"></a>下载<em><a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a></em></h2><p>其中 LTS为稳定版本 ，Current为当前最新版本</p>
@@ -215,14 +217,14 @@ var _hmt = _hmt || [];
 <h2 id="安装Hexo及初步预览"><a href="#安装Hexo及初步预览" class="headerlink" title="安装Hexo及初步预览"></a>安装Hexo及初步预览</h2><p>网上大多hexo的配置都是以前版本的指令了，最新的还要参考<em><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo官网</a></em><br>任意位置右键选择Git Bash Here(即打开git的命令窗口)<br><code>$ npm install -g hexo-cli</code><br>接下来找一个你要建立网站的目录，在它的上一级git bash here，执行命令  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;  </span><br><span class="line">$ cd &lt;folder&gt;  </span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
 <p>此时你的界面应该是这样的  </p>
-<p><img src="http://op1ybr0zi.bkt.clouddn.com/mulu.png" alt="avatar"></p>
-<p>下面我们测试一下环境搭的怎么样<br><code>hexo g</code><br>原为generate缩写为g，意为生成，在<em><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">hexo官网</a></em>上有详细的说明<br><code>hexo s</code><br>原为server缩写为s，提交到本地服务器进行查看<br>当你看到这个界面   </p>
-<p><img src="http://op1ybr0zi.bkt.clouddn.com/hexos.png" alt="avatar">  </p>
+<p><img src="/2018/08/07/02Blog-Build/assets/1547024489695.png" alt="1547024489695"></p>
+<p>下面我们测试一下环境搭的怎么样<br><code>hexo g</code><br>原为generate缩写为g，意为生成，在<em><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">hexo官网</a></em>上有详细的说明<br><code>hexo s</code><br>原为server缩写为s，提交到本地服务器进行查看<br>当你看到这个界面</p>
+<p><img src="/2018/08/07/02Blog-Build/assets/1547024466501.png" alt="1547024466501"></p>
 <p>就说明你测试成功啦，恭喜，就可以到<em><a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></em>查看你已经初步搭建的网页预览图啦。<br><strong>如果你的目的达成了，那么下面就不需要继续看下去了，想有不同风格的主题往下看。</strong></p>
-<h2 id="网站主题"><a href="#网站主题" class="headerlink" title="网站主题"></a>网站主题</h2><h3 id="寻找主题"><a href="#寻找主题" class="headerlink" title="寻找主题"></a>寻找主题</h3><p>当我们看到预览图，肯定会有些小兴奋，不过冷静，事情还没办完。<br>留心查看一下，你会发现根目录下有个themes的文件夹，我们下面自己下载的主题就放到这个目录下面<br>现在，到<em><a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo主题平台</a></em>选择自己喜欢的主题吧，样式非常多，有的挑了。</p>
+<h2 id="网站主题"><a href="#网站主题" class="headerlink" title="网站主题"></a>网站主题</h2><h3 id="寻找主题"><a href="#寻找主题" class="headerlink" title="寻找主题"></a>寻找主题</h3><p>当我们看到预览图，肯定会有些小兴奋，不过冷静，事情还没办完。<br>留心查看一下，你会发现根目录下有个themes的文件夹，我们下面自己下载的主题就放到这个目录下面。<br>现在，到<em><a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo主题平台</a></em>选择自己喜欢的主题吧，样式非常多，有的挑了。</p>
 <h3 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h3><p>下载主题两种方式.  </p>
 <ol>
-<li>第一种是点开主题的github界面，按照README.txt中的指令，在刚刚提到的themes目录下操作  </li>
+<li>第一种是点开主题的github界面，按照README.txt中的指令，在刚刚提到的themes目录下操作 </li>
 <li>第二种是github界面右上角下载”clone and download”  下完之后放到themes目录下</li>
 </ol>
 <h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p>其实不只是配置主题，对Github页面的大部分编辑操作都涉及到根目录下面的_config.yml文件，将其中的themes后面的值改为对应主题文件夹名称。<br><strong>注意中间的空格不能丢，会报错的</strong></p>
@@ -412,7 +414,7 @@ var GUEST = ['nick','mail','link'];
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 YuleZhang&#39;s Blogs
+    		&copy; 2019 YuleZhang&#39;s Blogs
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -516,10 +518,6 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">socket</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
@@ -529,6 +527,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">模板</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">socket</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -560,15 +562,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">局域网通信</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Computer Network</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Wireshark</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">局域网通信</a>
               </li>
              
               <li class="article-tag-list-item">
