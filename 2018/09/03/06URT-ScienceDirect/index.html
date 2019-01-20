@@ -8,14 +8,14 @@
   <link rel="dns-prefetch" href="https://yulezhang.github.io">
   <title>一种新的基于小阴影图像的彩色图像秘密共享方案 | YuleZhang&#39;s Blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="图像分存,(k,n)门限">
+  <meta name="keywords" content="(k,n)门限,博客">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一种新的基于小阴影图像的彩色图像秘密共享方案">
 <meta property="og:url" content="https://yulezhang.github.io/2018/09/03/06URT-ScienceDirect/index.html">
 <meta property="og:site_name" content="YuleZhang&#39;s Blogs">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://yulezhang.github.io/img/secretImage.jpg">
-<meta property="og:updated_time" content="2018-10-08T08:09:47.138Z">
+<meta property="og:updated_time" content="2019-01-20T08:09:26.950Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一种新的基于小阴影图像的彩色图像秘密共享方案">
 <meta name="twitter:image" content="https://yulezhang.github.io/img/secretImage.jpg">
@@ -71,7 +71,7 @@ var _hmt = _hmt || [];
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/archives/">博客</a></li>
+				<li><a href="/tags/博客/">博客</a></li>
 	        
 				<li><a href="/tags/随笔/">随笔</a></li>
 	        
@@ -157,7 +157,7 @@ var _hmt = _hmt || [];
 				
 					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/archives/">博客</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/博客/">博客</a></li>
 		        
 					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
 		        
@@ -204,7 +204,7 @@ var _hmt = _hmt || [];
 <p>由于秘密图像可能是彩色图像，本文提出了一种有损秘密彩色图像共享方案，扩展了秘密图像共享的应用。在我们的方案中，阴影的大小取决于K的数量和较大的K产生较小的阴影。实验结果表明，该方案能有效地减小阴影的大小。本文的其余部分整理如下。第2节包含了（k，n）门限方案和GSBTC的简要回顾。第3节详细介绍了我们的方案。第4节给出了实验结果，并对所提出的方案进行了统计分析和安全性分析。在第5节中描述了未来的工作和一些结论。</p>
 <h3 id="相关工作"><a href="#相关工作" class="headerlink" title="相关工作"></a>相关工作</h3><p>采用两个重要的技术来设计我们的方案：（k，n）门限方案和GSBTC。前者允许将一个秘密图像分解成n个阴影图像，仅需要k个阴影来构造原始秘密图像。后者可以将一个秘密的彩色图像压缩成更小的尺寸，并具有可接受的失真。换言之，通过采用(k，n)阈值方案和GSBTC，可以克服数据传输过程中的潜在损耗，并且可以成功地减小阴影大小。为了给出所提出的方案的背景知识，这些技术在以下各节中说明</p>
 <h4 id="基于多项式插值的Shamir（k，n）门限方案"><a href="#基于多项式插值的Shamir（k，n）门限方案" class="headerlink" title="基于多项式插值的Shamir（k，n）门限方案"></a>基于多项式插值的Shamir（k，n）门限方案</h4><p>1979，Shamir提出了一种基于多项式插值的（k，n）门限方案。他的方案假定数据D被分成n个片段D1，D2，.…D n，并且仅需要任何D的k个部分，其中$k \leq n$，才能重建原始秘密数据D。因此，如果仅接收（k  - 1）或小于（k -1）个片段，则仍然不能显示秘密数据D。</p>
-<p>假设秘密数据D是一个数字。在Shamir的方案中，素数g是随机选择的，K - 1的多项式分担函数是在等式（1）中被划分为N个阴影。<br>          f(x) = (a<sub>0</sub> + a<sub>1</sub>x + ……+a<sub>k-1</sub>x<sup>k-1</sup>)%g<br>其中a<sub>1</sub>，a<sub>2</sub>，……a<sub>k - 1</sub>都是随机数，并且a<sub>0</sub>=D。i＝1～n的每个D<sub>i</sub>可由方程导出。<br>D<sub>i</sub> = f(i)<br>其中i＝1 -n，并且每一个D1，D2，。…Dn被视为阴影。为了获得秘密数据D，D<sub>i</sub>的任何k个或更多阴影可以重构f（x）。多项式函数f(x)的所有系数可由拉格朗日插值公式导出，并可计算秘密数据D=a0=f(0)。<br>本文提出的秘密彩色图像共享方案基于Shamir(k，n)阈值方案，使得秘密图像D被划分为n个阴影(D1，D2，.…，Dn）然而，在所提出的方案中，每份的大小随着分享数量的增加而减少。</p>
+<p>假设秘密数据D是一个数字。在Shamir的方案中，素数g是随机选择的，K - 1的多项式分担函数是在等式（1）中被划分为N个阴影。<br>​          f(x) = (a<sub>0</sub> + a<sub>1</sub>x + ……+a<sub>k-1</sub>x<sup>k-1</sup>)%g<br>其中a<sub>1</sub>，a<sub>2</sub>，……a<sub>k - 1</sub>都是随机数，并且a<sub>0</sub>=D。i＝1～n的每个D<sub>i</sub>可由方程导出。<br>D<sub>i</sub> = f(i)<br>其中i＝1 -n，并且每一个D1，D2，。…Dn被视为阴影。为了获得秘密数据D，D<sub>i</sub>的任何k个或更多阴影可以重构f（x）。多项式函数f(x)的所有系数可由拉格朗日插值公式导出，并可计算秘密数据D=a0=f(0)。<br>本文提出的秘密彩色图像共享方案基于Shamir(k，n)阈值方案，使得秘密图像D被划分为n个阴影(D1，D2，.…，Dn）然而，在所提出的方案中，每份的大小随着分享数量的增加而减少。</p>
 <h4 id="一个单位图BTC的渐进搜索算法"><a href="#一个单位图BTC的渐进搜索算法" class="headerlink" title="一个单位图BTC的渐进搜索算法"></a>一个单位图BTC的渐进搜索算法</h4><p>在采用Shamir（k，n）阈值方案将一个秘密图像分割成若干个阴影以克服数据传输过程中可能出现的任何损失之前，我们需要解决另一个问题，即如何减小原始彩色图像的大小，从而减小阴影大小。Chang和Wu设计的一个单位图BTC（GSBTC）的渐进搜索算法是我们的解决方案。块截断编码（BTC）变体GSBTC是一种简单而简单的彩色图像压缩算法。</p>
 <p>在传统BTC中，图像首先被分成几个非重叠的方块，每个块可以是4×4、8×8等。然后计算每个块的平均像素值x。一般来说，$ \bar{x} $是量化阈值。在块中，将每个像素值X<sub>i</sub>与$ \bar{x} $进行比较，从而生成由两个组组成的位图。如果$ \bar{x} $&lt;X<sub>i</sub>，则位图中的相应位属于组-1，表示为“1”；否则，该位属于组-0，表示为“0”。虽然BTC被设计为压缩灰度图像而不是彩色图像，但同样的过程可以应用于彩色图像。不幸的是，压缩比不是<br>当使用BTC压缩彩色图像时，也是如此，因为彩色图像由三个平面R、G和B组成，并且当使用BTC时，这三个平面形成三个位图。</p>
 <p>为了提高彩色图像中的BTC压缩比，通常的方法是生成一个公共位图，该位图使三个单独的位图的失真最小。然而，设计一个生成一个公共位图的算法是一个很难的问题。Chang和Wu的GSBTC算法生成一个等价的公共位图，该位图在保持低计算复杂度的同时，提供解压缩图像的可接受的图像质量。在本文中，我们使用GSBTC对秘密彩色图像进行压缩，然后给出一个秘密图像。有损秘密彩色图像共享方案。为了更好地解释我们提出的方案，我们首先在以下段落中详细介绍Chang和Wu的GSBTC算法。</p>
@@ -222,11 +222,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">图像分存</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">(k,n)门限</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">(k,n)门限</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">博客</a>
         		</li>
       		
 		</ul>
@@ -550,6 +550,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">computer network</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
               </li>
             
             <div class="clearfix"></div>
